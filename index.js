@@ -10,17 +10,21 @@ const HOST = '0.0.0.0';
 const app = express()
 // Morgan
 app.use(morgan('tiny'))
+// Get variables
+var pjson = require('./package.json');
 // Health check
 app.use('/healthcheck', require('express-healthcheck')());
+// Get git last lastcommitsha
+require('child_process').exec('git rev-parse HEAD', function(err, stdout) {
+    console.log('Last commit hash on this branch is:', stdout);
+});
 // First route
 app.get('/', (req, res) => {
-    res.json({"myapplication": [ { "version": "1.0",
-    "description" : "pre-interview technical test",
-    "lastcommitsha": "abc57858585"
+    res.json({"myapplication": [ { "version": pjson.version,
+    "description" : pjson.description,
+    "lastcommitsha": stdout
 } ]})
 })
-
-
 
 // Starting server
 app.listen(PORT, HOST);
