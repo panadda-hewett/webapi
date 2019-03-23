@@ -1,0 +1,22 @@
+{
+  "name": "Test",
+  "version": "1.0.1",
+  "description": "Panadda - pre-interview technical test",
+  "author": "Panadda Hewett",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node_modules/.bin/nodemon --harmony -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-healthcheck": "^0.1.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10"
+  }
+}
