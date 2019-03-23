@@ -12,17 +12,18 @@ const app = express()
 app.use(morgan('tiny'))
 // Get variables
 var pjson = require('./package.json');
+var gitver = "";
 // Health check
 app.use('/healthcheck', require('express-healthcheck')());
 // Get git last lastcommitsha
 require('child_process').exec('git rev-parse HEAD', function(err, stdout) {
-    console.log('Last commit hash on this branch is:', stdout);
+    gitver = stdout; console.log('Last commit hash on this branch is:', gitver);
 });
 // First route
 app.get('/', (req, res) => {
     res.json({"myapplication": [ { "version": pjson.version,
     "description" : pjson.description,
-    "lastcommitsha": stdout
+    "lastcommitsha": gitver
 } ]})
 })
 
