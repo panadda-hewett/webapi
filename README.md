@@ -1,8 +1,8 @@
 # webapi
-This is a containerised web api application that returns basic information about the application. This application is writtened in NodeJS. The CI/CD pipelines has been configured in Azure DevOps (VSTS) and deploy to the Azure App service for Container: https://panadda-webapi.azurewebsites.net.
+This is a containerised web api application that returns basic information about the application. This application is writtened in NodeJS. The CI/CD pipelines has been configured in Azure DevOps (VSTS) and deploy to the Azure App service for Container: https://panadda-webapi.azurewebsites.net .
 
 # Features
-1. the default endpoint will returns information about the application in JSON format. 
+1. the endpoint will returns information about the application in JSON format. 
 Example:
 {
     "myapplication": [
@@ -14,6 +14,7 @@ Example:
     ]
 }
 2. "/healhcheck" endpoint
+Example: https://panadda-webapi.azurewebsites.net/healhcheck
 
 # Dependencies
 1. express
