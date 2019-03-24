@@ -36,9 +36,9 @@ Example: https://panadda-webapi.azurewebsites.net/healthcheck
 * npm test
 
 # Continuous Integration (CI)
-Current Buid Pipeline status: <img src="https://dev.azure.com/1variety/Panadda/_apis/build/status/WebApi?branchName=master">
 This reponsitory has been configured with Azure DevOps build pipeline:
 https://dev.azure.com/1variety/panadda/_build?definitionId=3
+Current Buid Pipeline status: <img src="https://dev.azure.com/1variety/Panadda/_apis/build/status/WebApi?branchName=master">
 
 The pipeline gets executed when new code is commited and pushed to Master brunch.
 
