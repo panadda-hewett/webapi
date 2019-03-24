@@ -48,10 +48,10 @@ Example: https://panadda-webapi.azurewebsites.net/healthcheck
 docker build -t panadda/webapi .
 
 # local deploy
-docker run -p 5000:8080 -d panadda/webapi
+docker run -p 49160:8080 -d panadda/webapi
 
 # local test
-curl -i localhost:5000
+curl -i localhost:49160
 
 # Requirement for CI/CD
 * Azure Subscription
