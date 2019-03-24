@@ -28,6 +28,9 @@ npm test
 This reponsitory has been configured with Azure DevOps build pipeline:
 https://dev.azure.com/1variety/panadda/_build?definitionId=3
 
+The pipeline gets executed when new code is commited and pushed to Master brunch.
 
 # Continuous Delivery (CD)
 This reponsitory has been configured with Azure DevOps release pipeline
+
+This pipeline get executed when above build pipeline is succeeded.
