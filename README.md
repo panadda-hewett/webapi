@@ -41,7 +41,7 @@ https://dev.azure.com/1variety/panadda/_build?definitionId=3
 
 The pipeline gets executed when new code is commited and pushed to Master brunch.
 
-The pipeline has been set to public views only. Unauthorized user can edit, manange, delete.
+The pipeline has been set to public views only. Unauthorized user cannot edit, manange, delete.
 
 The pipeline contains steps to performs above npm installations, buid dockerfile and push to Azure container repository (ACR). The full configuration of the pipeline can be downloaded as JSON format file from the 3 dots icon at the top right conner menu next to 'Queue' option, then select 'Export'.
 
