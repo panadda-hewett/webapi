@@ -17,7 +17,7 @@ var gitver = "";
 app.use('/healthcheck', require('express-healthcheck')());
 // Get git last lastcommitsha
 require('child_process').exec('git rev-parse HEAD', function(err, stdout) {
-    gitver = stdout; console.log('Last commit hash on this branch is:', gitver);
+    gitver = stdout;
 });
 // First route
 app.get('/', (req, res) => {
