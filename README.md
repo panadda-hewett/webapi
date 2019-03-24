@@ -3,6 +3,7 @@ This is a containerised web api application that returns basic information about
 
 # Features
 1. the endpoint will returns information about the application in JSON format. 
+
 Example:
 {
     "myapplication": [
@@ -13,6 +14,11 @@ Example:
         }
     ]
 }
+
+* version is a variable set from package.json
+* description is a variable set from package.json
+* lastcommitsha is from a GIT last commit hash
+
 
 2. "/healthcheck" endpoint
 Example: https://panadda-webapi.azurewebsites.net/healthcheck
