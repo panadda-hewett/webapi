@@ -3,7 +3,16 @@ This is a containerised web api application that returns basic information about
 
 # Features
 1. the default endpoint will returns information about the application in JSON format. 
-Example, {"myapplication":[{"version":"1.0.1","description":"Panadda - pre-interview technical test","lastcommitsha":"a8a118bb4cf9cc426f500a371eaaf0a8859d49bd\n"}]}
+Example:
+{
+    "myapplication": [
+        {
+            "version": "1.0.1",
+            "description": "Panadda - pre-interview technical test",
+            "lastcommitsha": "ce0fecf9c9cc48b04d9037b3199fd3281a7c8484\n"
+        }
+    ]
+}
 2. "/healhcheck" endpoint
 
 # Dependencies
