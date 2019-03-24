@@ -44,6 +44,15 @@ Example: https://panadda-webapi.azurewebsites.net/healthcheck
 * npm dev
 * npm test
 
+# Local build
+docker build -t panadda/webapi .
+
+# local deploy
+docker run -p 5000:8080 -d panadda/webapi
+
+# local test
+curl -i localhost:5000
+
 # Requirement for CI/CD
 * Azure Subscription
 * Azure App Service for Container (Linux)
