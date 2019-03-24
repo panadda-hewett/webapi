@@ -26,11 +26,11 @@ Example: https://panadda-webapi.azurewebsites.net/healthcheck
 3. The application exposes to port 8080
 
 # Dependencies
-1. express
-2. express-healthcheck
-3. morgan
-4. nodemon
-5. git
+* express
+* express-healthcheck
+* morgan
+* nodemon
+* git
 
 # Installation
 
