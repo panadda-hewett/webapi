@@ -17,7 +17,7 @@ Example:
 2. "/healthcheck" endpoint
 Example: https://panadda-webapi.azurewebsites.net/healthcheck
 
-3. The application expose port 8080
+3. The application exposes to port 8080
 
 # Dependencies
 1. express
