@@ -2,7 +2,8 @@
 This is a containerised web api application that returns basic information about the application. This application is writtened in NodeJS. The CI/CD pipelines has been configured in Azure DevOps (VSTS) and deploy to the Azure App service for Container: https://panadda-webapi.azurewebsites.net.
 
 # Features
-1. the default endpoint will returns information about the application in JSON format. Example, {"myapplication":[{"version":"1.0.1","description":"Panadda - pre-interview technical test","lastcommitsha":"a8a118bb4cf9cc426f500a371eaaf0a8859d49bd\n"}]}
+1. the default endpoint will returns information about the application in JSON format. 
+Example, {"myapplication":[{"version":"1.0.1","description":"Panadda - pre-interview technical test","lastcommitsha":"a8a118bb4cf9cc426f500a371eaaf0a8859d49bd\n"}]}
 2. "/healhcheck" endpoint
 
 # Dependencies
