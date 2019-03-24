@@ -41,6 +41,13 @@ https://dev.azure.com/1variety/panadda/_build?definitionId=3
 
 The pipeline gets executed when new code is commited and pushed to Master brunch.
 
+The pipeline has been set to public views only. Unauthorized user can edit, manange, delete.
+
+The pipeline contains steps to performs above npm installations, buid dockerfile and push to Azure container repository (ACR). The full configuration of the pipeline can be downloaded as .JSON file from the 3 dots icon on the top right conner menu next to 'Queue' option, then select 'Export'.
+
+https://dev.azure.com/1variety/Panadda/_apis/build/status/WebApi?branchName=master
+
+
 # Continuous Delivery (CD)
 This reponsitory has been configured with Azure DevOps release pipeline:
 https://dev.azure.com/1variety/Panadda/_release?definitionId=2
