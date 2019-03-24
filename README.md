@@ -3,7 +3,7 @@ This is a containerised web api application that returns basic information about
 
 # Features
 1. the default endpoint will returns information about the application in JSON format
-2. a "/healhcheck" endpoint
+2. "/healhcheck" endpoint
 
 # Dependencies
 1. express
@@ -14,15 +14,15 @@ This is a containerised web api application that returns basic information about
 
 # Installation
 
-npm install
-npm install express
-npm install --save-dev morgan nodemon
-npm install express-healthcheck
+* npm install
+* npm install express
+* npm install --save-dev morgan nodemon
+* npm install express-healthcheck
 
 # Commands
-npm start
-npm dev
-npm test
+* npm start
+* npm dev
+* npm test
 
 # Continuous Integration (CI)
 This reponsitory has been configured with Azure DevOps build pipeline:
