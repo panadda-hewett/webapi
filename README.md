@@ -38,7 +38,6 @@ Example: https://panadda-webapi.azurewebsites.net/healthcheck
 # Continuous Integration (CI)
 This reponsitory has been configured with Azure DevOps build pipeline:
 https://dev.azure.com/1variety/panadda/_build?definitionId=3
-Current Buid Pipeline status: <img src="https://dev.azure.com/1variety/Panadda/_apis/build/status/WebApi?branchName=master">
 
 The pipeline gets executed when new code is commited and pushed to Master brunch.
 
@@ -46,6 +45,7 @@ The pipeline has been set to public views only. Unauthorized user can edit, mana
 
 The pipeline contains steps to performs above npm installations, buid dockerfile and push to Azure container repository (ACR). The full configuration of the pipeline can be downloaded as JSON format file from the 3 dots icon at the top right conner menu next to 'Queue' option, then select 'Export'.
 
+Current Buid Pipeline status: <img src="https://dev.azure.com/1variety/Panadda/_apis/build/status/WebApi?branchName=master">
 
 # Continuous Delivery (CD)
 This reponsitory has been configured with Azure DevOps release pipeline:
