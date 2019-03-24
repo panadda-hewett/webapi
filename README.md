@@ -13,8 +13,8 @@ Example:
         }
     ]
 }
-2. "/healhcheck" endpoint
-Example: https://panadda-webapi.azurewebsites.net/healhcheck
+2. "/healthcheck" endpoint
+Example: https://panadda-webapi.azurewebsites.net/healthcheck
 
 # Dependencies
 1. express
