@@ -1,7 +1,7 @@
 {
   "name": "Test",
   "version": "1.0.1",
-  "description": "Panadda - pre-interview technical test",
+  "description": "Basic Information.",
   "author": "Panadda Hewett",
   "main": "index.js",
   "scripts": {
