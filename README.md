@@ -79,6 +79,7 @@ https://dev.azure.com/1variety/Panadda/_release?definitionId=2
 This pipeline gets executed when above build pipeline is completed successfully.
 
 The pipeline contains step to run below Azure CLI script on the 'Hosted Ubuntu 1604'
+
 az webapp config container set -n panadda-webapi -g public -c webapi.azurecr.io/panadda-hewett/webapi:$(Build.BuildId)
 
 The pipeline has been set to public views only. Unauthorized user cannot edit, manange, delete.
