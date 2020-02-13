@@ -42,6 +42,6 @@ steps:
 - task: Docker@0
   displayName: 'Push an image'
   inputs:
-    azureSubscription: 'Panadda-Admin'
+    azureSubscription: '$(azureSubscription)'
     azureContainerRegistry: '{"loginServer":"webapi.azurecr.io", "id" : "/subscriptions/$(subscriptionId)/resourceGroups/Public/providers/Microsoft.ContainerRegistry/registries/webapi"}'
     action: 'Push an image'
