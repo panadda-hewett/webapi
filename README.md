@@ -60,7 +60,9 @@ curl -i localhost:5000
 
 # Continuous Integration (CI)
 This reponsitory has been configured with Azure DevOps build pipeline:
-https://dev.azure.com/1variety/panadda/_build?definitionId=3
+https://1variety.visualstudio.com/Panadda/_build?definitionId=7
+
+The pipeline runs build.yml from this respository.
 
 The pipeline gets executed when new code is commited and pushed to Master brunch.
 
@@ -70,23 +72,18 @@ The pipeline contains steps to performs above npm installations, buid dockerfile
 
 Current Buid Pipeline status: <img src="https://dev.azure.com/1variety/Panadda/_apis/build/status/WebApi?branchName=master">
 
-# Add CI pipeline to your own Azure DevOps
-The full configuration of the pipeline can be downloaded as JSON format file from the 3 dots icon at the top right conner menu next to 'Queue' option, then select 'Export'. Import the exported .json file into your own Azure DevOps, select the 'Hosted Ubuntu 1604' as an agent pool then select your Azure subscription and your Azure Container Registry in the Build and Push steps.
-
 # Continuous Delivery (CD)
 This reponsitory has been configured with Azure DevOps release pipeline:
 https://dev.azure.com/1variety/Panadda/_release?definitionId=2
 
 This pipeline gets executed when above build pipeline is completed successfully.
 
+The pipeline contains step to run below Azure CLI script on the 'Hosted Ubuntu 1604'
+az webapp config container set -n panadda-webapi -g public -c webapi.azurecr.io/panadda-hewett/webapi:$(Build.BuildId)
+
 The pipeline has been set to public views only. Unauthorized user cannot edit, manange, delete.
 
 The pipeline will deploy to https://panadda-webapi.azurewebsites.net
-
-# Add CD pipeline with your own Azure DevOps
-Add a new release pipeline in your Azure DevOps portal. select the 'Hosted Ubuntu 1604' as an agent pool. Add an Azure CLI step then select your Azure subscription. Add inline script below:
-
-az webapp config container set -n panadda-webapi -g public -c webapi.azurecr.io/panadda-hewett/webapi:$(Build.BuildId)
 
 # Risks associated
 1. If the Github repository name has been changed, the build pipeline connections to Github may break
