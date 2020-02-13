@@ -1,0 +1,47 @@
+pool:
+  name: Hosted Ubuntu 1604
+  demands: npm
+
+steps:
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    verbose: false
+
+- task: Npm@1
+  displayName: 'npm install express'
+  inputs:
+    command: custom
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    verbose: false
+    customCommand: 'install express'
+
+- task: Npm@1
+  displayName: 'npm install express-healthcheck'
+  inputs:
+    command: custom
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    verbose: false
+    customCommand: 'install express-healthcheck'
+
+- task: Npm@1
+  displayName: 'npm install --save-dev morgan nodemon'
+  inputs:
+    command: custom
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    verbose: false
+    customCommand: 'install --save-dev morgan nodemon'
+
+- task: Docker@0
+  displayName: 'Build an image'
+  inputs:
+    azureSubscription: '$(azureSubscription)'
+    azureContainerRegistry: '{"loginServer":"webapi.azurecr.io", "id" : "/subscriptions/$(subscriptionId)/resourceGroups/Public/providers/Microsoft.ContainerRegistry/registries/webapi"}'
+
+- task: Docker@0
+  displayName: 'Push an image'
+  inputs:
+    azureSubscription: 'Panadda-Admin'
+    azureContainerRegistry: '{"loginServer":"webapi.azurecr.io", "id" : "/subscriptions/$(subscriptionId)/resourceGroups/Public/providers/Microsoft.ContainerRegistry/registries/webapi"}'
+    action: 'Push an image'
