@@ -36,12 +36,12 @@ steps:
 - task: Docker@0
   displayName: 'Build an image'
   inputs:
-    azureSubscription: '$(azureSubscription)'
+    azureSubscription: 'Panadda-Admin'
     azureContainerRegistry: '{"loginServer":"webapi.azurecr.io", "id" : "/subscriptions/$(subscriptionId)/resourceGroups/Public/providers/Microsoft.ContainerRegistry/registries/webapi"}'
 
 - task: Docker@0
   displayName: 'Push an image'
   inputs:
-    azureSubscription: '$(azureSubscription)'
+    azureSubscription: 'Panadda-Admin'
     azureContainerRegistry: '{"loginServer":"webapi.azurecr.io", "id" : "/subscriptions/$(subscriptionId)/resourceGroups/Public/providers/Microsoft.ContainerRegistry/registries/webapi"}'
     action: 'Push an image'
